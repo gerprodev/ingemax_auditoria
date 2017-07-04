@@ -15,6 +15,9 @@ class RegistroPeticion(models.Model):
     url = models.TextField()
     tipo_peticion = models.CharField(max_length=10)
     codigo_peticion = models.IntegerField()
+    # Control
+    importante = models.BooleanField(default=False)
+    solucionado = models.BooleanField(default=False)
     # Opcionales
     tiempo = models.FloatField(default=0)
     informacion = mysql_models.JSONField(null=True, blank=True)
@@ -27,3 +30,6 @@ class RegistroPeticion(models.Model):
     def __str__(self):
     	return '%s (%s - %s(%d))' % (self.instancia, self.tipo_peticion,
     		self.usuario_nombre, self.usuario_pk)
+
+    def get_usuario(self):
+        return '%s (%s)' % (self.usuario_nombre, self.usuario_pk)
