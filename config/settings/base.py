@@ -4,7 +4,7 @@ import dj_database_url
 from unipath import Path
 
 
-BASE_DIR = Path(__file__).ancestor(2)
+BASE_DIR = Path(__file__).ancestor(3)
 
 # Application definition
 

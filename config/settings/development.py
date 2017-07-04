@@ -19,9 +19,9 @@ DATABASES = {
 
 # Static files (CSS, JavaScript, Images)
 
-STATICFILES_DIRS = (
-    BASE_DIR.child('static'),
-)
+# STATICFILES_DIRS = (
+#     BASE_DIR.child('static'),
+# )
 
 STATIC_ROOT = BASE_DIR.ancestor(1).child('static')
 

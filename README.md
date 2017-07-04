@@ -17,7 +17,7 @@ Note: For Windows 7 Pro - Mac OS X use Docker Toolbox.
 ## Construir contenedor
 ```sh
 sudo docker build -t ingemax-p3:latest .
-sudo docker run -d --name=ingemax-auditoria --restart=unless-stopped --network=ingemax_network -e APP_NAME=ingemax_auditoria -v /srv:/srv -p 9000:8000 ingemax-p3:latest
+sudo docker run -d --name=ingemax-auditoria --restart=unless-stopped --network=ingemaxbi_network -e APP_NAME=ingemax_auditoria -v /srv/auditoria:/srv -p 9000:8000 ingemax-p3:latest
 ```
 
 ## Conectarse al contenedor
