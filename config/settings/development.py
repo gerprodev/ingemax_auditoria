@@ -23,6 +23,8 @@ STATICFILES_DIRS = (
     BASE_DIR.child('static'),
 )
 
+STATIC_ROOT = BASE_DIR.ancestor(1).child('static')
+
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR.ancestor(1).child('media')
